@@ -14,7 +14,7 @@ module.exports = {
   
     // entry: './__demo/demo*.js',
     
-    entry: './__demo/*.js',
+    // entry: './__demo/*.js',
 
-    // entry: './_hooks/**/*.js',
+    entry: './_emit/*.js',
 }
