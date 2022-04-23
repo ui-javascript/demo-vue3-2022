@@ -16,5 +16,6 @@ module.exports = {
     
     // entry: './__demo/*.js',
 
-    entry: './_emit/*.js',
+    // entry: './_emit/*.js',
+    entry: './_ref-reactive-diff/*.js',
 }
