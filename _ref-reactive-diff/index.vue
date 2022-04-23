@@ -1,9 +1,20 @@
 <template>
-  模板
+  {{ obj.arr }}
 </template>
 
-<script>
+<script setup>
+import {reactive, onMounted } from "vue"
+const obj = reactive({
+  arr: []
+}) 
 
+onMounted(() => {
+  obj.arr = [1,2,3]
+})
+
+</script>
+
+<script>
 export default {
   name: 'App',
   components: {
@@ -11,13 +22,3 @@ export default {
 }
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
