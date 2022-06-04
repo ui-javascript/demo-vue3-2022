@@ -13,9 +13,13 @@
 <script setup>
 import {
   ref,
-  watch,
+  watchEffect,
+  // onMounted,
+  // onUnmounted
 } from "vue";
 
+
+let timer = null
 const text = ref("text");
 const count = ref(0);
 
@@ -28,26 +32,29 @@ const changeText = () => {
 };
 
 
-const waitAndChangeText = async() => {
-  return new Promise();
-}
+watchEffect(
+  () => {
 
-watch(
-  count,
-  (count, prevCount) => {
-    
-    console.log(text.value)
+    console.log("timer" + timer)
 
-    // setTimeout(() => {
-    //   console.log("最新的text " + text.value);
-    // }, 2000);
-
-    console.log(text.value)
-
-    // waitAndChangeTextimage.png
-
+    timer = setTimeout(() => {
+      console.log("最新的count " + count.value);
+      console.log("最新的text " + text.value);
+    }, 2000);
+ 
   }
 );
+
+// onMounted(() => {
+//   console.log("输出" + timer)
+//   timer = setTimeout(() => {
+//     console.log("最新值" + count.value)
+//   }, 3000)
+// })
+// onUnmounted(() => {
+//   clearTimeout(timer)
+// })
+
 </script>
 
 <script>
