@@ -13,9 +13,9 @@
 <script setup>
 import {
   ref,
-  watchEffect,
-  // onMounted,
-  // onUnmounted
+  // watch,
+  onMounted,
+  onUnmounted
 } from "vue";
 
 
@@ -32,28 +32,31 @@ const changeText = () => {
 };
 
 
-watchEffect(
-  () => {
+// watch(
+//   count,
+//   () => {
 
-    console.log("timer" + timer)
+//     console.log("timer" + timer)
 
-    timer = setTimeout(() => {
-      console.log("最新的count " + count.value);
-      console.log("最新的text " + text.value);
-    }, 2000);
+//     timer = setTimeout(() => {
+//       console.log("最新的count " + count.value);
+//       console.log("最新的text " + text.value);
+//     }, 2000);
  
-  }
-);
+//   }
+// );
 
-// onMounted(() => {
-//   console.log("输出" + timer)
-//   timer = setTimeout(() => {
-//     console.log("最新值" + count.value)
-//   }, 3000)
-// })
-// onUnmounted(() => {
-//   clearTimeout(timer)
-// })
+onMounted(() => {
+  console.log("输出" + timer)
+  timer = setTimeout(() => {
+    console.log("最新值" + count.value)
+    console.log("最新的text " + text.value);
+  }, 3000)
+})
+
+onUnmounted(() => {
+  clearTimeout(timer)
+})
 
 </script>
 
