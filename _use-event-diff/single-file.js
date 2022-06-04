@@ -12,11 +12,6 @@ const App = {
       count: 0,
     }
   },
-  // computed: {
-  //   plusOne: function () {
-  //     return this.count + 1
-  //   },
-  // },
   methods: {
     increment() {
       this.count++
