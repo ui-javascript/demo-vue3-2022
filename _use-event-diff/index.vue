@@ -27,13 +27,24 @@ const changeText = () => {
   text.value = "text " + Math.random();
 };
 
+
+const waitAndChangeText = async() => {
+  return new Promise();
+}
+
 watch(
   count,
   (count, prevCount) => {
     
-    setTimeout(() => {
-      console.log("最新的text " + text.value);
-    }, 2000);
+    console.log(text.value)
+
+    // setTimeout(() => {
+    //   console.log("最新的text " + text.value);
+    // }, 2000);
+
+    console.log(text.value)
+
+    // waitAndChangeTextimage.png
 
   }
 );
