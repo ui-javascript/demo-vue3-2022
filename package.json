@@ -10,11 +10,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ant-design-vue": "^3.1.0-rc.2",
     "core-js": "^3.8.3",
     "element-plus": "^2.1.4",
-    "ant-design-vue": "^3.1.0-rc.2",
     "html-webpack-plugin": "^5.5.0",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-virtual-scroller": "^2.0.0-alpha.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

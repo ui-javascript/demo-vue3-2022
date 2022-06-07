@@ -19,5 +19,7 @@ module.exports = {
     // entry: './_emit/*.js',
     // entry: './_ref-reactive-diff/*.js',
 
-    entry: './_use-event-diff/*.js',
+    // entry: './_use-event-diff/*.js',
+
+    entry: './_vue-virtual-scroller/*.js',
 }
