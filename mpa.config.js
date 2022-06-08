@@ -21,7 +21,7 @@ module.exports = {
 
     // entry: './_use-event-diff/*.js',
 
-    // entry: './_vue-virtual-scroller/*.js',
+    entry: './_vue-virtual-scroller/*.js',
 
-    entry: './_godbasin-cat/*.js',
+    // entry: './_godbasin-cat/*.js',
 }
